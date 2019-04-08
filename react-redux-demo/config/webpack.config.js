@@ -12,9 +12,9 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: '../dist',
-        port: 3001,
+        port: 3000,
         proxy: {
-            '/api':'http://localhost:3000'
+            '/api':'http://localhost:3001'
         },
     },
     entry: './demo.js',
@@ -67,7 +67,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './index.html',
-            title: 'flux-demo'
+            title: 'react-redux-demo'
         })
     ],
     optimization: {

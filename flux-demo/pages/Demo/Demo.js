@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import demoStore from '../../stores/Demo';
 import demoAction from '../../actions/Demo';
 
+import './Demo.less'
+
 export default class DemoComponent extends Component {
     state = demoStore.getState();
 
@@ -54,7 +56,7 @@ export default class DemoComponent extends Component {
         const { listData, totalCount, whatever } = this.state;
         return (
             <div className="demo-wrapper">
-                <p>这是一个flux数据流的demo</p>
+                <p className="demo-wrapper__title">这是一个flux数据流的demo</p>
                 <ul>
                     {
                         listData.map((item, index) => {
