@@ -11,5 +11,11 @@ export default handleActions({
       ...state,
       example: action.payload.asyncData
     }
+  },
+  NOTIFY_STATE_CHANGE: (state, action) => {
+    return {
+      ...state,
+      addition: action.payload.addition
+    }
   }
 }, defaultProps)
