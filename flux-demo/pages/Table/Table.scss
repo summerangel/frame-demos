@@ -1,0 +1,49 @@
+.code-box-demo {
+  padding: 42px 24px 50px;
+  color: rgba(0,0,0,0.65);
+  border-bottom: 1px solid #ebedf0;
+}
+
+.ant-table-wrapper {
+  zoom: 1;
+  &:before {
+    display: table;
+    content: '';
+  }
+  .ant-spin-nested-loading {
+    position: relative;
+  }
+  .ant-spin-container {
+    position: relative;
+    transition: opacity .3s;
+  }
+}
+
+.ant-table {
+  //-webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: relative;
+  clear: both;
+  .ant-table-scroll {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
+.ant-table-header-column {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.ant-table-body {
+  & > tr {
+    transition: all .3s,height 0s;
+  }
+}

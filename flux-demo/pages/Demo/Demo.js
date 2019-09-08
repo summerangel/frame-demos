@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import demoStore from '../../stores/Demo';
 import demoAction from '../../actions/Demo';
 
-import './Demo.less'
+import './Demo.scss'
 
 export default class DemoComponent extends Component {
     state = demoStore.getState();

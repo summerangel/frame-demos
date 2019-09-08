@@ -42,7 +42,17 @@ module.exports = {
             {
                 test: /\.(sa|sc|c|le)ss$/,
                 use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            // you can specify a publicPath here
+                            // by default it uses publicPath in webpackOptions.output
+                            // publicPath: '../',
+                            hmr: process.env.NODE_ENV === 'development',
+                        },
+                    },
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ],
                 exclude: /node_modules/,
@@ -63,7 +73,7 @@ module.exports = {
             // filename: "[name].[hash].css",
             // chunkFilename: "[id].[hash].css"
             filename: "build.css",
-            chunkFilename: path.resolve(__dirname, '../dist')
+            chunkFilename: "[id].css"
         }),
         new HtmlWebpackPlugin({
             template: './index.html',

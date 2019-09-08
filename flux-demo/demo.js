@@ -5,9 +5,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-import DemoComponent from './pages/Demo/Demo';
+// import DemoComponent from './pages/Demo/Demo';
+import TableComponent from './pages/Table/Table';
 
 ReactDom.render(
-    <DemoComponent />,
+    <TableComponent />,
     document.getElementById('flux-demo')
 )
